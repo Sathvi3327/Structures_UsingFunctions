@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<string.h>
+struct employee                                       //defining structure
+{
+	char Name[10];
+	int Age;
+	long long int Phone_number;
+	int Salary;
+};
+void display(struct employee emp);                    //function prototype
+
+int main()
+{
+	printf("Name\tAge\tPhone_number\tSalary\n");
+	struct employee emp1;
+	struct employee emp2;
+	struct employee emp3;
+	
+	strcpy(emp1.Name,"Chirag");                       //employee 1 details
+	emp1.Age = 24;
+	emp1.Phone_number = 123456788;
+	emp1.Salary = 20000;
+	
+	strcpy(emp2.Name,"Arnav");                        //employee 2 details
+	emp2.Age = 31;
+	emp2.Phone_number = 1234567891;
+	emp2.Salary = 56000;
+	
+	strcpy(emp3.Name,"Shivam");                        //employee 3 details
+	emp3.Age = 45;
+	emp3.Phone_number = 8881101111;
+	emp3.Salary = 30500;
+	
+	display (emp1);
+	display (emp2);
+	display (emp3);
+	
+	return 0;
+}
+void display(struct employee emp)                      //Displaying details of the employees
+{
+	printf("%s\t",emp.Name);
+	printf("%d\t",emp.Age);
+	printf("%lld\t",emp.Phone_number);
+	printf("%d\t",emp.Salary);
+	printf("\n");
+}
